@@ -1,8 +1,4 @@
-# Simone Saravalli's DevOps code
-
-## About the author
-
-Hi, my name is Simone Saravalli and I'm a DevOps engineer.
+## Homelab
 
 ## About The Project
 
