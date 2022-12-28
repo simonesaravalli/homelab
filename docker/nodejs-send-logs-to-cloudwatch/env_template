@@ -1,0 +1,6 @@
+MY_NAME="put your name here, it will be sent to CloudWatch"
+NODE_ENV="production"
+CLOUDWATCH_GROUP_NAME="/path/of/cloudwatch/log/group/on/aws"
+CLOUDWATCH_ACCESS_KEY="aws_iam_access_key"
+CLOUDWATCH_SECRET_ACCESS_KEY="aws_iam_secret_key"
+CLOUDWATCH_REGION="aws_region"

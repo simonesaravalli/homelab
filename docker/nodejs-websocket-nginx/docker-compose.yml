@@ -1,0 +1,14 @@
+version: "2.4"
+
+services:
+   ws-backend:
+      image: ws-backend
+
+   web-frontend:
+      image: web-frontend
+
+   reverse-proxy:
+      image: reverse-proxy
+      ports:
+         - "8080:80"
+         - "8081:81"

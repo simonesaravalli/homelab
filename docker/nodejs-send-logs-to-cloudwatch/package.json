@@ -1,0 +1,17 @@
+{
+  "name": "nodejs_simple_web_app",
+  "version": "1.0.0",
+  "description": "Node.js Simple Web App. Logs are sent to AWS CloudWatch",
+  "author": "Simone Saravalli - simone.saravalli@faacgroup.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "aws-sdk": "2.1068.0",
+    "express": "^4.16.1",
+    "dotenv": "^16.0.0",
+    "winston": "^3.5.1",
+    "winston-cloudwatch": "^3.1.1"
+  }
+}
