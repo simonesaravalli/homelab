@@ -1,0 +1,41 @@
+---
+- hosts: ubuntu
+  gather_facts: yes
+  become: yes
+
+  tasks:
+  - name: Update all packages to their latest version on Ubuntu systems
+    ansible.builtin.apt:
+      name: "*"
+      state: latest
+      update_cache: yes
+
+  - name: Check if a reboot is required.
+    ansible.builtin.stat:
+      path: /var/run/reboot-required
+      get_md5: no
+    register: reboot_required_file
+
+  - name: Reboot the server (if required).
+    ansible.builtin.reboot:
+    when: reboot_required_file.stat.exists == true
+
+  - name: Remove dependencies that are no longer required.
+    ansible.builtin.apt:
+      autoremove: yes
+
+- hosts: centos
+  gather_facts: yes
+  become: yes
+
+  tasks:
+  - name: Update all packages to their latest version on Centos systems
+    ansible.builtin.yum:
+      name: "*"
+      state: latest
+      update_cache: yes
+      conf_file: /etc/yum.conf
+
+  - name: Remove dependencies that are no longer required.
+    ansible.builtin.yum:
+      autoremove: yes
