@@ -22,7 +22,7 @@ The available Ansible playbooks for OS updates are:
 To run OS updates on Linux nodes run this command:
 
 ```
-ansible-playbook playbooks/linux_updates.yml -i inventory/os_updates -K
+ansible-playbook playbooks/os_updates/linux_updates.yml -i inventory/os_updates -K
 ```
 
 When asked specify the password of sudo user to run updates on all systems.
@@ -30,7 +30,7 @@ When asked specify the password of sudo user to run updates on all systems.
 To run OS updates on Windows hosts run this command:
 
 ```
-ansible-playbook playbooks/windows_updates.yml -i inventory/os_updates -k
+ansible-playbook playbooks/os_updates/windows_updates.yml -i inventory/os_updates -k
 ```
 
 When asked specify the password of local Windows Administrator user.
