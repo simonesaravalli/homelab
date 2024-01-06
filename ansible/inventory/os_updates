@@ -28,6 +28,6 @@ ansible_winrm_server_cert_validation=ignore
 <list of centos hosts here>
 
 [windows]
-<list of windows hosts here>
+<list of microsoft windows hosts here>
 
 ###################################################
